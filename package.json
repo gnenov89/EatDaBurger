@@ -1,0 +1,23 @@
+{
+  "name": "eatdaburger",
+  "version": "1.0.0",
+  "description": "A burger eating app",
+  "main": "server.js",
+  "scripts": {
+    "test": "Burgelicious!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnenov89/EatDaBurger.git"
+  },
+  "keywords": [
+    "Adidas",
+    "Tracksuit"
+  ],
+  "author": "Georgi Nenov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gnenov89/EatDaBurger/issues"
+  },
+  "homepage": "https://github.com/gnenov89/EatDaBurger#readme"
+}
