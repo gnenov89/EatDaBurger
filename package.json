@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/gnenov89/EatDaBurger/issues"
   },
-  "homepage": "https://github.com/gnenov89/EatDaBurger#readme"
+  "homepage": "https://github.com/gnenov89/EatDaBurger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.14.1"
+  }
 }
