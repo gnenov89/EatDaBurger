@@ -1,0 +1,92 @@
+html {
+    background-color:  #FF3300;
+}
+
+body {
+    width: 75%;
+   margin: 0 auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: white;
+}
+
+#burger {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 65px;
+    margin: 50px;
+
+}
+
+.burgerAvailable {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #b7ffc2;
+    border: none;
+}
+
+.burgerAvailable {
+    background-color: #81ff94;
+}
+
+.burgerEaten {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffd1c9;
+}
+
+h2 {
+     text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 40px;
+    margin: 50px;
+}
+
+.formContainer {
+    background-color: #00E1FF;
+}
+
+.addBurgerButton {
+    
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #734CFF;
+    
+}
+
+.addBurgerButton:active {
+   background-color: #FFC04C;
+}
+
+.burgerFooter {
+   background-color: #FFC04C;
+   padding: 20px 0;
+   text-align: center
+}

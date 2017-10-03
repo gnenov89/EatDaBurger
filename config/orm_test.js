@@ -1,36 +1,35 @@
-// Import the ORM adn connection objects 
-var orm = require("./orm.js");
+// Import the ORM and connection objects
+var orm = require ('./orm.js');
 
-// Import the connection file directory 
-var connection = require("./connection.js");
+// Import the connection file directly, in order to terminate the connection at the end of the test run
+var connection = require ('./connection.js');
 
-// Select all entries from database 
-orm.selectAll("burgers", function(data){
-    console.log("orm.selectAll test...\n\n");
+// Select all entries from the database
+orm.selectAll('burgers', function (data) {
+	console.log('orm.selectAll test...\n\n');
 
-    console.log("______Burger Menu________\n");
+	console.log('__________Burger Menu__________\n');
 
+	for (var i = 0; i < data.length; i++) {
+		console.log('Burger ID = ' + data[i].id);
+		console.log('Burger Name = ' + data[i].burger_name);
+		console.log('Available = ' + data[i].devoured);
 
-    for (var i = 0; i < data.length; i++) {
-        console.log("Burger ID = " + data[i].burger_name);
-        console.log("Burger Name" + data[i].burger_name);
-        console.log("Available" + data[i].devoured);
-        console.log("++++++++++++++++++++");
-    }
+		console.log('+++++++++++++++++++++++++++++++++++++++');
+	}
 });
 
-// Insert a single nentry into the database 
-orm.insertOne(
-    "burgers",
-    ["burger_name", "devoured"],
-    ["Success Story Mushroom Double-Stack Burger", false],
-    function(data){
-        console.log("\n\norm.insertOne test...\n\n");
+// Insert a single entry into the database
+orm.insertOne('burgers', 
+	         ['burger_name', 'devoured'], 
+	         ['Success Story Mushroom Double-Stack Burger', false], 
+	         function (data) {
+	console.log('\n\norm.insertOne test...\n\n');
 
-        console.log("Insert new row with ID = " +data.insertId + "\n\n");
-    });
+	console.log('Inserted new row with ID = ' + data.insertId + '\n\n');
+});
 
-    // Update a single entry in the database
+// Update a single entry in the database
 orm.updateOne('burgers', {devoured: true}, 'id = 7', function (data) {
 	console.log('\n\norm.updateOne test...\n\n');
 

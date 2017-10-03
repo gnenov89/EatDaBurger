@@ -1,10 +1,10 @@
-// import he burger model 
-var burger = require("./burger.js");
+// Import the burger model to gain access to the database functions
+var burger = require('./burger.js');
 
-// Import the connection file directory to kill the connection at the end of the test session
-var connection = require("../config/connection.js");
+// Import the connection file directly, in order to terminate the connection at the end of the test run
+var connection = require('../config/connection.js');
 
-// Select all entries from the database 
+// Select all entries from the database
 burger.selectAll(function (data) {
 	console.log('burger.selectAll test...\n\n');
 
@@ -19,20 +19,21 @@ burger.selectAll(function (data) {
 	}
 });
 
-/// Insert a single entry into the database
+// Insert a single entry into the database
 burger.insertOne(['burger_name', 'devoured'], 
-['Late Night Juicy Burger', false], 
-function (data) {
-  console.log('\n\nburger.insertOne test...\n\n');
+	         	 ['Late Night Juicy Burger', false], 
+	    		 function (data) {
+					console.log('\n\nburger.insertOne test...\n\n');
 
-  console.log('Inserted new row with ID = ' + data.insertId + '\n\n');
-}
+					console.log('Inserted new row with ID = ' + data.insertId + '\n\n');
+				 }
 );
 
-// Update a single entry in the databse 
-burger.updateOne({devoured: true}, "id=10", function(data) {
-    console.log("\n\nburger.updateOne.test...\n\n");
-});
+// Update a single entry in the database
+burger.updateOne({devoured: true}, 'id = 10', function (data) {
+	console.log('\n\nburger.updateOne test...\n\n');
 
+	console.log('Result: ' + data.message);
+});
 
 connection.end();
